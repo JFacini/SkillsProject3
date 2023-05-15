@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+
+/* Sets max page width to 1200 px*/
+html {
+  max-width: 1200px;
+}
+
+.inputforms {
+    margin-left: 40%;
+}
+
+label, input {
+  display: block;
+}
+
+label {
+  margin-bottom: 20px;
+}
+
+  label {
+    margin-bottom: 20px;
+}
+
+input[type=text] {
+  border-radius: 3px;
+ 
+}
+
+select {
+  border-radius: 5px;
+}
+
+/* Menu bar properties. Our menu uses display flex with space-between as an easy and responsive way to space out the three elements within.*/
+.topnav {
+  color: white;
+  background-color: #8cb7e2;
+  position:relative;
+  z-index: 1;
+  display:flex;
+  justify-content: space-between;
+  box-shadow: 0px 10px 5px #888888;
+  }
+
+/* Default value for content within the hamburger menu is display none. Toggled by our button function to display block. */
+#BurgerLinks {
+  display: none;
+}
+
+/* Hamburger link properties. When set to display: relative, all links appear, but the relative formatting moves other relative elements. 
+I did try fixing the other elements in place, but this did not feel responsive - particularly the lower text content would be stuck in place and not 
+adjust vertically to match the shrinking top image when resized. Using display:absolute on the menu items also does not appear to work... */
+#BurgerLinks a {
+  color: white;
+  background-color: #316773;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  max-width: 150px;
+  display: block;
+  position: fixed;
+   z-index: 2;
+/* A z-index of 2 is used to prevent the nav bar drop shadow from appearing over the menu items*/
+}
+
+/* Hamburger menu items look different when hovered*/
+#BurgerLinks a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+
+/* Because we are using space-between for horizontal spacing in the nav bar, the only formatting we really need on our text and paddle image is 
+vertical alignment. This probably could have been applied to .topnav itself.*/
+h1 {
+    align-self: center;
+}
+
+.topnav-right {
+    align-self: center;
+}
+
+
+
+.topmaincontainer {
+  position: relative;
+}
+
+
+/* This styling is applied to the "Come Experience Canada" text. It centers the text relative to the top container, which contains the canoe image.
+To be honest I do not fully understand what the transform styling is doing here - I took this from w3schools */
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 45px;
+  color: white;
+}
+
+/* Apply slight horizontal margins to our content container*/
+.contentmaincontainer {
+margin-left: 13%;
+margin-right: 13%;
+position: relative;
+}
+
+/* our horizontal line diving the content from the top image looks a bit more responsive with a max width of less than 100% */
+hr {
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h2 {
+  text-align: center;
+  }
+
+/* styling for links to trip pages*/
+.triplinks {
+  font-size: larger;
+  color: darkgreen;
+}
+
+/* Hard coded breakpoint at 800 px width. EM is used to simply scale all text down to 75% of its original size. Oddly, our centred text was not 
+shrinking and needed a separate line*/
+@media only screen and (max-width: 800px) {
+  html {font-size: 0.75em;}
+  .center {font-size: 30px}
+}
+
+.centergif{
+display:flex;
+justify-content:center;
+align-items:center
+}
